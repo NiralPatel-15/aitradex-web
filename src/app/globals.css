@@ -1,49 +1,325 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "tailwindcss";
+
+@theme {
+  /* ==========================================================
+     AITradeX Brand Colors
+  ========================================================== */
+
+  --color-primary: #2962ff;
+  --color-primary-hover: #1f4ed8;
+  --color-primary-light: #e8f0ff;
+
+  /* ==========================================================
+     Semantic Colors
+  ========================================================== */
+
+  --color-success: #16a34a;
+  --color-success-light: #dcfce7;
+
+  --color-warning: #f59e0b;
+  --color-warning-light: #fef3c7;
+
+  --color-danger: #ef4444;
+  --color-danger-light: #fee2e2;
+
+  --color-info: #0ea5e9;
+  --color-info-light: #e0f2fe;
+
+  /* ==========================================================
+     Surfaces
+  ========================================================== */
+
+  --color-background: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f9fafb;
+
+  /* ==========================================================
+     Text
+  ========================================================== */
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+  --color-text-inverse: #ffffff;
+
+  /* ==========================================================
+     Borders
+  ========================================================== */
+
+  --color-border: #e5e7eb;
+  --color-border-hover: #d1d5db;
+  --color-border-focus: #2962ff;
+
+  /* ==========================================================
+     Border Radius
+  ========================================================== */
+
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ==========================================================
+     Shadows
+  ========================================================== */
+
+  --shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.05);
+  --shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 8px 24px rgba(17, 24, 39, 0.08);
+  --shadow-lg: 0 16px 40px rgba(17, 24, 39, 0.12);
+
+  /* ==========================================================
+     Layout
+  ========================================================== */
+
+  --spacing-container: 1280px;
+  --spacing-header: 72px;
+  --spacing-sidebar: 280px;
+
+  /* ==========================================================
+     Typography
+  ========================================================== */
+
+  --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
+
+  /* ==========================================================
+     Animation
+  ========================================================== */
+
+  --transition-fast: 200ms;
+  --transition-normal: 300ms;
+  --transition-slow: 450ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ==========================================================
+   Base
+========================================================== */
 
 html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
+  width: 100%;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  background: #f7f9fc;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  background: #f7f9fc;
+  color: #111827;
+
+  font-family: var(--font-body), Inter, sans-serif;
+  line-height: 1.6;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+/* ==========================================================
+   Box Sizing
+========================================================== */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
+
+/* ==========================================================
+   Typography
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-heading), "Plus Jakarta Sans", sans-serif;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Media
+========================================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================
+   Form Elements
+========================================================== */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ==========================================================
+   Links
+========================================================== */
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* ==========================================================
+   Selection
+========================================================== */
+
+::selection {
+  background: #e8f0ff;
+  color: #111827;
+}
+
+/* ==========================================================
+   Focus Accessibility
+========================================================== */
+
+:focus-visible {
+  outline: 2px solid #2962ff;
+  outline-offset: 2px;
+}
+
+/* ==========================================================
+   AITradeX Container
+========================================================== */
+
+.aitradex-container {
+  width: min(1280px, 92%);
+  margin-inline: auto;
+}
+
+/* ==========================================================
+   AITradeX Fade Animation
+========================================================== */
+
+@keyframes aitradex-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
   }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aitradex-fade-in {
+  animation: aitradex-fade-in 400ms ease both;
+}
+
+/* ==========================================================
+   Reduced Motion
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================
+   Responsive Typography
+========================================================== */
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+
+/* ==========================================================
+   Clean Scrollbars - AITradeX
+   Hide scrollbar visually but preserve scrolling
+========================================================== */
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }

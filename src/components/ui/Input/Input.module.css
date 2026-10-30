@@ -1,0 +1,162 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+
+  color: var(--color-text-primary);
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.inputContainer {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+
+  font: inherit;
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--color-border-hover);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: var(--focus-ring);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  background: var(--color-surface-secondary);
+  color: var(--color-text-muted);
+}
+
+.inputLeft {
+  padding-left: 44px;
+}
+
+.inputRight {
+  padding-right: 44px;
+}
+
+.iconLeft,
+.iconRight {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  color: var(--color-text-secondary);
+
+  pointer-events: none;
+}
+
+.iconLeft {
+  left: var(--space-4);
+}
+
+.iconRight {
+  right: var(--space-4);
+}
+
+.iconButton {
+  position: absolute;
+  right: var(--space-3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: var(--radius-full);
+
+  background: transparent;
+  color: var(--color-text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.iconButton:hover {
+  background: var(--color-surface-secondary);
+}
+
+.iconButton:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.error {
+  border-color: var(--color-danger);
+}
+
+.error:focus {
+  border-color: var(--color-danger);
+}
+
+.success {
+  border-color: var(--color-success);
+}
+
+.helperText {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.errorText {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+}
+
+.successText {
+  color: var(--color-success);
+  font-size: 0.85rem;
+}

@@ -1,0 +1,110 @@
+:root {
+  --color-primary: #2962ff;
+  --color-primary-hover: #1f4ed8;
+  --color-primary-light: #e8f0ff;
+
+  --color-success: #16a34a;
+  --color-success-light: #dcfce7;
+
+  --color-warning: #f59e0b;
+  --color-warning-light: #fef3c7;
+
+  --color-danger: #ef4444;
+  --color-danger-light: #fee2e2;
+
+  --color-info: #0ea5e9;
+  --color-info-light: #e0f2fe;
+
+  --color-background: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f9fafb;
+  --color-overlay: rgba(17, 24, 39, 0.5);
+
+  /* ==========================================================
+     Text
+  ========================================================== */
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+  --color-text-inverse: #ffffff;
+
+  /* ==========================================================
+     Borders
+  ========================================================== */
+
+  --color-border: #e5e7eb;
+  --color-border-hover: #d1d5db;
+  --color-border-focus: #2962ff;
+
+  /* ==========================================================
+     Radius
+  ========================================================== */
+
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ==========================================================
+     Shadows
+  ========================================================== */
+
+  --shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.05);
+
+  --shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.06);
+
+  --shadow-md: 0 8px 24px rgba(17, 24, 39, 0.08);
+
+  --shadow-lg: 0 16px 40px rgba(17, 24, 39, 0.12);
+
+  /* ==========================================================
+     Spacing (4px Grid)
+  ========================================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ==========================================================
+     Layout
+  ========================================================== */
+
+  --container-width: 1280px;
+  --header-height: 72px;
+  --sidebar-width: 280px;
+
+  /* ==========================================================
+     Animation
+  ========================================================== */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.45s ease;
+
+  /* ==========================================================
+     Focus
+  ========================================================== */
+
+  --focus-ring: 0 0 0 3px rgba(41, 98, 255, 0.2);
+
+  /* ==========================================================
+     Z-Index
+  ========================================================== */
+
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-overlay: 900;
+  --z-modal: 1000;
+  --z-toast: 1100;
+  --z-tooltip: 1200;
+}

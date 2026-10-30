@@ -1,0 +1,16 @@
+.container {
+  width: min(var(--container-width), 92%);
+  margin-inline: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}

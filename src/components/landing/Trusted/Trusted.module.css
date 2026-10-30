@@ -1,0 +1,131 @@
+.trusted {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #00d09c;
+  color: #eaf7ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.container h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+.container p {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: #6b7280;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.techStack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.techItem:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s ease;
+}
+
+.techItem:hover .icon {
+  transform: scale(1.12);
+}
+
+.techItem span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+@media (max-width: 992px) {
+  .techStack {
+    gap: 35px;
+  }
+
+  .container h2 {
+    font-size: 38px;
+  }
+
+  .icon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted {
+    padding: 80px 20px;
+  }
+
+  .container h2 {
+    font-size: 32px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  .techStack {
+    gap: 30px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .techStack {
+    gap: 25px;
+  }
+
+  .container h2 {
+    font-size: 28px;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .techItem span {
+    font-size: 14px;
+  }
+}
